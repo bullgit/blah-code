@@ -1,0 +1,11 @@
+{
+  "name": "blah-code",
+  "version": "0.0.0",
+  "description": "Encode and decode blah code.",
+  "repository": {
+    "type": "git",
+    "url": "bullgit/blah-code"
+  },
+  "dependencies": {}
+}
+

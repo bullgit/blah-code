@@ -1,0 +1,14 @@
+{
+  "name": "blah-code",
+  "version": "0.0.0",
+  "description": "Encode and decode blah code.",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": "bullgit/blah-code",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.21.x"
+  }
+}
+
