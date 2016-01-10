@@ -1,14 +1,27 @@
 {
   "name": "blah-code",
   "version": "0.0.0",
+  "license": "MIT",
   "description": "Encode and decode blah code.",
+  "repository": "bullgit/blah-code",
+  "homepage": "https://bullg.it/blah-code",
+  "author": {
+    "name": "Michael Kühnel",
+    "email": "mail@michael-kuehnel.de",
+    "url": "http://michael-kuehnel.de"
+  },
+  "files": [
+    "blah-code.js"
+  ],
   "scripts": {
     "test": "mocha test/*.js"
   },
-  "repository": "bullgit/blah-code",
+  "keywords": [
+    "blah",
+    "bullgit"
+  ],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "~1.21.x"
+    "mocha": "^1.21.5"
   }
 }
-
