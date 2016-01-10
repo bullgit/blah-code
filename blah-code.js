@@ -1,10 +1,9 @@
-(function(root, factory) {
-
+(function (root, factory) {
 	'use strict';
 
 	if (typeof define === 'function' && define.amd) {
 		// AMD. Register as an anonymous module.
-		define([], function() {
+		define([], function () {
 			return (root.returnExportsGlobal = factory());
 		});
 	} else if (typeof exports === 'object') {
@@ -16,8 +15,7 @@
 		// Browser globals
 		root.returnExportsGlobal = factory();
 	}
-
-}(this, function() {
+})(this, function () {
 	// UMD Definition above, do not remove this line
 
 	// To get to know more about the Universal Module Definition
@@ -29,9 +27,9 @@
 		this.someProperty = 'value';
 	};
 
-	blahCode.prototype.someMethod = function(value) {
+	blahCode.prototype.someMethod = function (value) {
 		return value + this.someProperty;
 	};
 
 	return blahCode;
-}));
+});
