@@ -15,7 +15,9 @@
     "blah-code.min.js"
   ],
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "mocha test/*.js",
+    "lint": "xo",
+    "posttest": "npm run lint"
   },
   "keywords": [
     "blah",
@@ -23,6 +25,17 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^1.21.5"
+    "mocha": "^1.21.5",
+    "xo": "^0.12.1"
+  },
+  "xo": {
+      "envs": [
+        "node",
+        "amd",
+        "mocha"
+      ],
+      "rules": {
+        "no-return-assign": [2, "except-parens"]
+      }
   }
 }
