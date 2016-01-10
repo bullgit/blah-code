@@ -11,7 +11,8 @@
     "url": "http://michael-kuehnel.de"
   },
   "files": [
-    "blah-code.js"
+    "blah-code.js",
+    "blah-code.min.js"
   ],
   "scripts": {
     "test": "mocha test/*.js"

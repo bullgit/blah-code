@@ -2,10 +2,25 @@
   "name": "blah-code",
   "version": "0.0.0",
   "description": "Encode and decode blah code.",
+  "license": "MIT",
+  "authors": [
+    "Michael Kühnel <mail@michael-kuehnel.de>"
+  ],
   "repository": {
     "type": "git",
-    "url": "bullgit/blah-code"
+    "url": "git://github.com/bullgit/blah-code.git"
   },
+  "main": [
+    "blah-code.js"
+  ],
+  "keywords": [
+    "blah",
+    "bullgit"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
   "dependencies": {}
 }
-
