@@ -15,7 +15,7 @@
     "blah-code.min.js"
   ],
   "scripts": {
-    "test": "mocha test/*.js",
+    "test": "mocha",
     "lint": "xo",
     "posttest": "npm run lint"
   },
@@ -25,17 +25,21 @@
   ],
   "dependencies": {},
   "devDependencies": {
+    "chai": "^3.4.1",
     "mocha": "^1.21.5",
     "xo": "^0.12.1"
   },
   "xo": {
-      "envs": [
-        "node",
-        "amd",
-        "mocha"
-      ],
-      "rules": {
-        "no-return-assign": [2, "except-parens"]
-      }
+    "envs": [
+      "node",
+      "amd",
+      "mocha"
+    ],
+    "rules": {
+      "no-return-assign": [
+        2,
+        "except-parens"
+      ]
+    }
   }
 }
