@@ -9,7 +9,9 @@
 
 > Encode and decode blah code
 
-As UMD module this runs almost everywhere (AMD (e.g RequireJS), CommonJS (Nodeland) and with good ol’ globals).
+As UMD module this runs almost everywhere [AMD (e.g RequireJS), CommonJS (Nodeland, browserify) and with good ol’ globals].
+
+Uses ECMAScript 5.1 intensively. So you need [es5-shim](https://github.com/es-shims/es5-shim) in case you want to use in old Browsers (IE < 9).
 
 ## Instal
 
@@ -30,7 +32,24 @@ CommonJS example:
 ```javascript
 var blahCode = require('blah-code');
 
+blahCode.encode('Hi there! What’s up?'); // -> blah blah blah blah blah […]
+
+blahCode.decode('blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah'); // -> hi there! whats up?
+
+
 ```
+
+## API
+
+Accepts a `string` and returns a `string`:
+
+### encode('Normal text')
+
+Returns the blah code representation of the given text.
+
+### decode('Blah code')
+
+Returns regular text of the given blah code.
 
 ## License
 
