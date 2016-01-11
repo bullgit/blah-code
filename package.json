@@ -15,6 +15,9 @@
     "blah-code.min.js",
     "blah-code.min.js.map"
   ],
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "scripts": {
     "test": "mocha",
     "lint": "xo",
