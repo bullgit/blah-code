@@ -65,6 +65,10 @@ Returns the blah code representation of the given text.
 
 Returns regular text of the given blah code.
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## License
 
 MIT © [Michael Kühnel](http://michael-kuehnel.de)

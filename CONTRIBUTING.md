@@ -1,0 +1,9 @@
+- Fork
+- `npm install`
+- Change
+- `npm test`
+- `npm run build`
+- Commit
+- Push
+- Create Pull request
+- Done :octocat:
