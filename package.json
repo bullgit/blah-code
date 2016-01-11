@@ -17,6 +17,7 @@
   "scripts": {
     "test": "mocha",
     "lint": "xo",
+    "lint:fix": "xo --fix",
     "posttest": "npm run lint"
   },
   "keywords": [

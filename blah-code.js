@@ -23,13 +23,116 @@
 
 	'use strict';
 
-	var blahCode = function blahCode() {
-		this.someProperty = 'value';
+	/**
+	 * Chars which are encoded. Others will be simply ignored ᕕ( ᐛ )ᕗ
+	 * @type {Array}
+	 * @private
+	 */
+	var chars = [
+		' ',
+		'a',
+		'b',
+		'c',
+		'd',
+		'e',
+		'f',
+		'g',
+		'h',
+		'i',
+		'j',
+		'k',
+		'l',
+		'm',
+		'n',
+		'o',
+		'p',
+		'q',
+		'r',
+		's',
+		't',
+		'u',
+		'v',
+		'w',
+		'x',
+		'y',
+		'z',
+		'ä',
+		'ü',
+		'ö',
+		'!',
+		'?',
+		'.',
+		'-',
+		'@'
+	];
+
+	/**
+	 * Repeats strings.
+	 *
+	 * @param       {String} string The string to repeat
+	 * @param       {Number} count how many times to repeat
+	 * @return      {String} Repeated Strings in one string
+	 * @private
+	 */
+	var repeat = function (string, count) {
+		var result = '';
+
+		if (count < 1) {
+			return '';
+		}
+
+		while (count > 1) {
+			if (count & 1) {
+				result += string;
+			}
+			count >>= 1;
+			string += string;
+		}
+		return result + string;
 	};
 
-	blahCode.prototype.someMethod = function (value) {
-		return value + this.someProperty;
+	/**
+	 * Constructor to be exported.
+	 */
+	var BlahCode = function () {};
+
+	/**
+	 * Encodes normal text to blah code.
+	 *
+	 * @param       {String} text Normal text.
+	 * @return      {String} Blah code
+	 * @public
+	 */
+	BlahCode.prototype.encode = function (text) {
+		var blah = [];
+
+		text.toLowerCase().split('').forEach(function (element) {
+			var position = chars.indexOf(element);
+
+			if (position !== -1) {
+				blah.push(repeat('blah ', position + 1).trim());
+			}
+		});
+
+		return blah.join(', ');
 	};
 
-	return blahCode;
+	/**
+	 * Decodes blah code to normal text.
+	 *
+	 * @param       {String} code Blah code.
+	 * @return      {String} Normal text
+	 * @public
+	 */
+	BlahCode.prototype.decode = function (code) {
+		var text = [];
+
+		code.split(',').forEach(function (element) {
+			text.push(chars[element.trim().split(' ').length - 1]);
+		});
+
+		return text.join('');
+	};
+
+	return BlahCode;
 });
