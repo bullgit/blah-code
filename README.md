@@ -9,9 +9,12 @@
 
 > Encode and decode blah code
 
+[Demotime](https://bullg.it/blah-code/) :rabbit:
+
 As UMD module this runs almost everywhere [AMD (e.g RequireJS), CommonJS (Nodeland, browserify) and with good ol’ globals].
 
 Uses ECMAScript 5.1 intensively. So you need [es5-shim](https://github.com/es-shims/es5-shim) in case you want to use in old Browsers (IE < 9).
+
 
 ## Instal
 
