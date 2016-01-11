@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Encode and decode blah code.">
+	<title>Blah code demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.0.3/milligram.min.css">
+	<style>
+		body { padding: 3rem 0; }
+		h1 { margin-bottom: 3rem; }
+		button {
+			background-color: #1393d5;
+			border-color: #1393d5;
+		}
+		textarea { height: 20rem; }
+		textarea:focus { border-color: #1393d5; }
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row">
+			<div class="column column-80 column-offset-10">
+				<h1>Blah code</h1>
+			</div>
+
+		</div>
+
+		<form action="#">
+
+			<div class="row">
+				<div class="column column-80 column-offset-10">
+					<label for="input">Input</label>
+					<textarea placeholder="Enter something here" id="input"></textarea>
+					<label for="output">Output</label>
+					<textarea placeholder="Output will appear right here …" id="output"></textarea>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column column-80 column-offset-10">
+					<label for="mode">Mode</label>
+					<select id="mode">
+						<option value="encode">Encode</option>
+						<option value="decode">Decode</option>
+					</select>
+					<button class="button-primary" type="submit">blah …</button>
+				</div>
+			</div>
+
+		</form>
+
+	</div>
+	<script src="blah-code.min.js"></script>
+	<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		var form = document.querySelectorAll('form')[0];
+		form.addEventListener('submit', function(e){
+			e.preventDefault();
+			if (document.querySelectorAll('#mode')[0].value === 'encode') {
+				document.querySelectorAll('#output')[0].value = blahCode.encode(document.querySelectorAll('#input')[0].value);
+			} else {
+				document.querySelectorAll('#output')[0].value = blahCode.decode(document.querySelectorAll('#input')[0].value);
+			}
+		});
+	});
+	</script>
+</body>
+
+</html>
