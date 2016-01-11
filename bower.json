@@ -1,6 +1,6 @@
 {
   "name": "blah-code",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Encode and decode blah code.",
   "license": "MIT",
   "authors": [
@@ -13,6 +13,7 @@
   "main": [
     "blah-code.js"
   ],
+  "ignore": "",
   "keywords": [
     "blah",
     "bullgit"
