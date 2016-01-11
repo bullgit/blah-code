@@ -32,7 +32,7 @@
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.1",
-    "mocha": "^1.21.5",
+    "mocha": "^2.3.4",
     "uglify-js": "^2.6.1",
     "xo": "^0.12.1"
   },
