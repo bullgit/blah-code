@@ -92,18 +92,13 @@
 	};
 
 	/**
-	 * Constructor to be exported.
-	 */
-	var BlahCode = function () {};
-
-	/**
 	 * Encodes normal text to blah code.
 	 *
 	 * @param       {String} text Normal text.
 	 * @return      {String} Blah code
 	 * @public
 	 */
-	BlahCode.prototype.encode = function (text) {
+	var encode = function (text) {
 		var blah = [];
 
 		text.toLowerCase().split('').forEach(function (element) {
@@ -124,7 +119,7 @@
 	 * @return      {String} Normal text
 	 * @public
 	 */
-	BlahCode.prototype.decode = function (code) {
+	var decode = function (code) {
 		var text = [];
 
 		code.split(',').forEach(function (element) {
@@ -134,5 +129,8 @@
 		return text.join('');
 	};
 
-	return BlahCode;
+	return {
+		encode: encode,
+		decode: decode
+	};
 });
