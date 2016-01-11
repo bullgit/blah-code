@@ -27,7 +27,7 @@ $ bower install --save blah-code
 
 ## Usage
 
-CommonJS example:
+### CommonJS example:
 
 ```javascript
 var blahCode = require('blah-code');
@@ -35,8 +35,19 @@ var blahCode = require('blah-code');
 blahCode.encode('Hi there! What’s up?'); // -> blah blah blah blah blah […]
 
 blahCode.decode('blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah'); // -> hi there! whats up?
+```
 
+### Global scope example:
 
+```html
+<script src="blah-code.min.js"></script>
+<script src="myFile.js"></script>
+```
+
+```javascript
+// myFile.js
+
+blahCode.encode('Hi there! What’s up?'); // -> blah blah blah blah blah […]
 ```
 
 ## API
