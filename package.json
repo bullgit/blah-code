@@ -12,13 +12,15 @@
   },
   "files": [
     "blah-code.js",
-    "blah-code.min.js"
+    "blah-code.min.js",
+    "blah-code.min.js.map"
   ],
   "scripts": {
     "test": "mocha",
     "lint": "xo",
     "lint:fix": "xo --fix",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "build": "uglifyjs blah-code.js --source-map blah-code.min.js.map --source-map-url blah-code.min.js.map --preamble \"/*! ${npm_package_name} - v${npm_package_version} - ${npm_package_homepage} - ${npm_package_license} License */\" --mangle --compress --output blah-code.min.js"
   },
   "keywords": [
     "blah",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^1.21.5",
+    "uglify-js": "^2.6.1",
     "xo": "^0.12.1"
   },
   "xo": {
