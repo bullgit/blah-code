@@ -13,7 +13,11 @@
   "main": [
     "blah-code.js"
   ],
-  "ignore": "",
+  "ignore": [
+    "CONTRIBUTING.md",
+    "package.json",
+    "test.js"
+  ],
   "keywords": [
     "blah",
     "bullgit"
