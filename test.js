@@ -1,5 +1,5 @@
 var expect = require('chai').expect;
-var blahCode = require('./blah-code');
+var blahCode = require('./');
 
 describe('blah-code', function () {
 	it('should encode normal text to blah-code', function () {

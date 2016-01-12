@@ -11,6 +11,7 @@
     "url": "http://michael-kuehnel.de"
   },
   "files": [
+    "index.js",
     "blah-code.js",
     "blah-code.min.js",
     "blah-code.min.js.map"
