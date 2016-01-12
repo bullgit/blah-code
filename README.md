@@ -16,7 +16,7 @@ As UMD module this runs almost everywhere [AMD (e.g RequireJS), CommonJS (Nodela
 Uses ECMAScript 5.1 intensively. So you need [es5-shim](https://github.com/es-shims/es5-shim) in case you want to use in old Browsers (IE < 9).
 
 
-## Instal
+## Install
 
 ```bash
 $ npm install --save blah-code
