@@ -65,20 +65,8 @@
 		</form>
 
 	</div>
-	<script src="blah-code.min.js"></script>
-	<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		var form = document.querySelectorAll('form')[0];
-		form.addEventListener('submit', function(e){
-			e.preventDefault();
-			if (document.querySelectorAll('#mode')[0].value === 'encode') {
-				document.querySelectorAll('#output')[0].value = blahCode.encode(document.querySelectorAll('#input')[0].value);
-			} else {
-				document.querySelectorAll('#output')[0].value = blahCode.decode(document.querySelectorAll('#input')[0].value);
-			}
-		});
-	});
-	</script>
+	<script src="http://bowercdn.net/c/blah-code-1.0.1/blah-code.min.js"></script>
+	<script src="initBlah.js"></script>
 </body>
 
 </html>
