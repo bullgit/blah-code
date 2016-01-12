@@ -69,6 +69,10 @@ Returns regular text of the given blah code.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md)
 
+## Related
+
+- [blah-code-cli](https://github.com/bullgit/blah-code-cli) - CLI for this module
+
 ## License
 
 MIT © [Michael Kühnel](http://michael-kuehnel.de)
