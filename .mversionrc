@@ -1,0 +1,10 @@
+{
+  "commitMessage": "Release v%s",
+  "tagName": "%s",
+  "scripts": {
+    "preupdate": "echo 'Bumping version'",
+    "precommit": "npm run build && git add blah-code.min.js && git add blah-code.min.js.map",
+    "postcommit": "git push && git push --tags && npm publish",
+    "postupdate": "echo 'Updated to version %s in manifest files und published version to github/bower and npm'"
+  }
+}

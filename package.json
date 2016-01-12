@@ -24,7 +24,10 @@
     "lint": "xo",
     "lint:fix": "xo --fix",
     "posttest": "npm run lint",
-    "build": "uglifyjs blah-code.js --source-map blah-code.min.js.map --source-map-url blah-code.min.js.map --preamble \"/*! ${npm_package_name} - v${npm_package_version} - ${npm_package_homepage} - ${npm_package_license} License */\" --mangle --compress --output blah-code.min.js"
+    "build": "uglifyjs blah-code.js --source-map blah-code.min.js.map --source-map-url blah-code.min.js.map --preamble \"/*! ${npm_package_name} - v${npm_package_version} - ${npm_package_homepage} - ${npm_package_license} License */\" --mangle --compress --output blah-code.min.js",
+    "release:major": "mversion major",
+    "release:minor": "mversion minor",
+    "release:patch": "mversion patch"
   },
   "keywords": [
     "blah",
@@ -34,6 +37,7 @@
   "devDependencies": {
     "chai": "^3.4.1",
     "mocha": "^2.3.4",
+    "mversion": "^1.10.1",
     "uglify-js": "^2.6.1",
     "xo": "^0.12.1"
   },
