@@ -18,3 +18,21 @@ describe('blah-code', function () {
 		expect(blahCode.decode('blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah, blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah, blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah, blah blah blah blah blah blah')).to.equal('mail@michael-kuehnel.de');
 	});
 });
+
+describe('ape-code', function () {
+	it('should encode text to ape code', function () {
+		expect(blahCode.encodeApe('Hi there!')).to.equal('Ook! Ook!, Ook? Ook. Ook., Ook., Ook! Ook. Ook!, Ook! Ook!, Ook? Ook!, Ook! Ook. Ook., Ook? Ook!, Ook? Ook. Ook? Ook.');
+	});
+
+	it('should decode ape code to text', function () {
+		expect(blahCode.decodeApe('Ook! Ook!, Ook? Ook. Ook., Ook., Ook! Ook. Ook!, Ook! Ook!, Ook? Ook!, Ook! Ook. Ook., Ook? Ook!, Ook? Ook. Ook? Ook.')).to.equal('hi there!');
+	});
+
+	it('should encode email to ape code', function () {
+		expect(blahCode.encodeApe('spamalot@hardcoded.de')).to.equal('Ook! Ook. Ook?, Ook? Ook! Ook?, Ook?, Ook? Ook? Ook?, Ook?, Ook? Ook? Ook., Ook? Ook! Ook., Ook! Ook. Ook!, Ook? Ook. Ook! Ook?, Ook! Ook!, Ook?, Ook! Ook. Ook., Ook? Ook?, Ook? Ook., Ook? Ook! Ook., Ook? Ook?, Ook? Ook!, Ook? Ook?, Ook? Ook. Ook? Ook!, Ook? Ook?, Ook? Ook!');
+	});
+
+	it('should decode ape code to email', function () {
+		expect(blahCode.decodeApe('Ook! Ook. Ook?, Ook? Ook! Ook?, Ook?, Ook? Ook? Ook?, Ook?, Ook? Ook? Ook., Ook? Ook! Ook., Ook! Ook. Ook!, Ook? Ook. Ook! Ook?, Ook! Ook!, Ook?, Ook! Ook. Ook., Ook? Ook?, Ook? Ook., Ook? Ook! Ook., Ook? Ook?, Ook? Ook!, Ook? Ook?, Ook? Ook. Ook? Ook!, Ook? Ook?, Ook? Ook!')).to.equal('spamalot@hardcoded.de');
+	});
+});
