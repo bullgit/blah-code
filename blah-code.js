@@ -79,12 +79,12 @@
 	var blahs = [
 		'bleh',
 		'blah',
-		'blih',
+		'bluh',
 		'blaah',
-		'bla',
-		'blu',
-		'ble',
-		'blaaa',
+		'bleeh',
+		'bluuh',
+		'blehh',
+		'blaa',
 		'blahh',
 		'blee'
 	];
