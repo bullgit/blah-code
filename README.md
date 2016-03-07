@@ -35,9 +35,9 @@ $ bower install --save blah-code
 ```javascript
 var blahCode = require('blah-code');
 
-blahCode.encode('Hi there! What’s up?'); // -> blah blah blah blah blah […]
+blahCode.encode('Hi there! What’s up?'); // → blaa bluh. blah bleh bluuh. […]
 
-blahCode.decode('blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah, blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah, blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah'); // -> hi there! whats up?
+blahCode.decode('blaa bluh. blah bleh bluuh. blaah bluh. blah blah blehh. blah bleh bleeh. blah bleh blah. blah blah bleeh. blah bleh blah. blaah blaah. blaah bluh. blahh blaa. blah bleh bleeh. blee blaa. blah blah blehh. blahh bluh blah blaa. blah blah bluuh. blaah bluh. blah blah blaa. blah blah bluh. blehh blaah'); // -> hi there! whats up?
 ```
 
 ### Global scope example:
@@ -50,20 +50,40 @@ blahCode.decode('blah blah blah blah blah blah blah blah blah, blah blah blah bl
 ```javascript
 // myFile.js
 
-blahCode.encode('Hi there! What’s up?'); // -> blah blah blah blah blah […]
+blahCode.encode('Hi there! What’s up?'); // → blaa bluh. blah bleh bluuh. […]
 ```
 
 ## API
 
 Accepts a `string` and returns a `string`:
 
-### encode('Normal text')
+### blahCode.encode()
 
-Returns the blah code representation of the given text.
+Returns the blah code representation of the given text:
 
-### decode('Blah code')
+```javascript
+blahCode.encode('Hi there! What’s up?');
+```
 
-Returns regular text of the given blah code.
+There is an optional parameter that you can use to switch from blah-code to ape-code. Just use:
+
+```javascript
+blahCode.encode('Hi there! What’s up?', 'ooks');
+```
+
+### blahCode.decode()
+
+Returns regular text of the given blah code:
+
+```javascript
+blahCode.decode('blaa bluh. blah bleh bluuh. blaah bluh.');
+```
+
+There is an optional parameter that you can use to switch from blah-code to ape-code. Just use:
+
+```javascript
+blahCode.decode('Oook! Ook!. Ook? Ook Oook. Ook?! Ook!.', 'ooks');
+```
 
 ## Contributing
 
