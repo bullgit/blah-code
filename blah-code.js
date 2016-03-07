@@ -24,7 +24,7 @@
 	'use strict';
 
 	/**
-	 * Chars which are encoded. Others will be simply ignored ᕕ( ᐛ )ᕗ
+	 * Chars which are encoded in apecode. Others will be simply ignored ᕕ( ᐛ )ᕗ
 	 * @type {Array}
 	 * @private
 	 */
@@ -72,29 +72,22 @@
 	];
 
 	/**
-	 * Repeats strings.
-	 *
-	 * @param       {String} string The string to repeat
-	 * @param       {Number} count how many times to repeat
-	 * @return      {String} Repeated Strings in one string
+	 * Strings of blah which are used to represent a number
+	 * @type {Array}
 	 * @private
 	 */
-	var repeat = function (string, count) {
-		var result = '';
-
-		if (count < 1) {
-			return '';
-		}
-
-		while (count > 1) {
-			if (count & 1) {
-				result += string;
-			}
-			count >>= 1;
-			string += string;
-		}
-		return result + string;
-	};
+	var blahs = [
+		'bleh',
+		'blah',
+		'blih',
+		'blaah',
+		'bla',
+		'blu',
+		'ble',
+		'blaaa',
+		'blahh',
+		'blee'
+	];
 
 	/**
 	 * Encodes normal text to blah code.
@@ -105,16 +98,19 @@
 	 */
 	var encode = function (text) {
 		var blah = [];
-
-		text.toLowerCase().split('').forEach(function (element) {
-			var position = chars.indexOf(element);
-
-			if (position !== -1) {
-				blah.push(repeat('blah ', position + 1).trim());
+		for (var letter in text) {
+			if (text.hasOwnProperty(letter)) {
+				var encoded = [];
+				var temporary = text[letter].charCodeAt(0).toString().split('');
+				for (var code in temporary) {
+					if (temporary.hasOwnProperty(code)) {
+						encoded.push(blahs[temporary[code]]);
+					}
+				}
+				blah.push(encoded.join(' '));
 			}
-		});
-
-		return blah.join(', ');
+		}
+		return blah.join('. ');
 	};
 
 	/**
@@ -124,14 +120,22 @@
 	 * @return      {String} Normal text
 	 * @public
 	 */
-	var decode = function (code) {
-		var text = [];
-
-		code.split(',').forEach(function (element) {
-			text.push(chars[element.trim().split(' ').length - 1]);
-		});
-
-		return text.join('');
+	var decode = function (text) {
+		var output = [];
+		var encoded = text.split('. ');
+		for (var char in encoded) {
+			if (encoded.hasOwnProperty(char)) {
+				var codes = encoded[char].split(' ');
+				var character = [];
+				for (var i in codes) {
+					if (codes.hasOwnProperty(i)) {
+						character.push(blahs.indexOf(codes[i]));
+					}
+				}
+				output.push(String.fromCharCode(character.join('')));
+			}
+		}
+		return output.join('');
 	};
 
 	/**

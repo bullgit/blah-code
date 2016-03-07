@@ -5,11 +5,19 @@
   "description": "Encode and decode blah code.",
   "repository": "bullgit/blah-code",
   "homepage": "https://bullg.it/blah-code",
-  "author": {
+  "contributors": [{
     "name": "Michael Kühnel",
     "email": "mail@michael-kuehnel.de",
     "url": "http://michael-kuehnel.de"
-  },
+  },{
+    "name": "Haroen Viaene",
+    "email": "hello@haroen.me",
+    "url": "https://haroen.me"
+  },{
+    "name": "Steve Ulrich",
+    "email": "spamalot@hardcoded.de",
+    "url": "http://hardcoded.de"
+  }],
   "files": [
     "index.js",
     "blah-code.js",
