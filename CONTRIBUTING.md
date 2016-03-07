@@ -23,7 +23,7 @@ Running one of this will:
 
 - bump version in `package.json` and `bower.json`
 - minify blah-code.js
-- commit changes to `package.json` and `bower.json` and `blah-code.min.js
+- commit changes to `package.json` and `bower.json` and `blah-code.min.js`
 - add a Git tag according to new version number
 - push changes and tag to Github
 - publish new version to npm
