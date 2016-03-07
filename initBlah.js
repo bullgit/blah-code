@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	form.addEventListener('submit', function (e) {
 		e.preventDefault();
 		if (document.querySelectorAll('#mode')[0].value === 'encode') {
-			document.querySelectorAll('#output')[0].value = blahCode.encode(document.querySelectorAll('#input')[0].value);
+			document.querySelectorAll('#output')[0].value = blahCode.encode(document.querySelectorAll('#input')[0].value, document.querySelector('input[name="language"]:checked').value);
 		} else {
-			document.querySelectorAll('#output')[0].value = blahCode.decode(document.querySelectorAll('#input')[0].value);
+			document.querySelectorAll('#output')[0].value = blahCode.decode(document.querySelectorAll('#input')[0].value, document.querySelector('input[name="language"]:checked').value);
 		}
 	});
 });

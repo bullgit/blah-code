@@ -20,8 +20,9 @@
 			background-color: #1393d5;
 			border-color: #1393d5;
 		}
-		textarea { height: 20rem; }
+		textarea { height: 15rem; }
 		textarea:focus { border-color: #1393d5; }
+		.radio { font-weight: normal; }
 	</style>
 </head>
 
@@ -35,16 +36,36 @@
 	<div class="container">
 
 		<div class="row">
-			<div class="column column-80 column-offset-10">
+			<div class="column column-80">
 				<h1>Blah code</h1>
 			</div>
 
 		</div>
 
 		<form action="#">
+			<div class="row">
+				<div class="column column-80">
+					<strong>Language</strong>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-20">
+					<label class="radio">
+						<input type="radio" name="language" value="blah" checked>
+						Blah
+					</label>
+				</div>
+
+				<div class="column column-20">
+					<label class="radio">
+						<input type="radio" name="language" value="ooks">
+						Ooks
+					</label>
+				</div>
+			</div>
 
 			<div class="row">
-				<div class="column column-80 column-offset-10">
+				<div class="column column-80">
 					<label for="input">Input</label>
 					<textarea placeholder="Enter something here" id="input"></textarea>
 					<label for="output">Output</label>
@@ -53,12 +74,17 @@
 			</div>
 
 			<div class="row">
-				<div class="column column-80 column-offset-10">
+				<div class="column column-80">
 					<label for="mode">Mode</label>
 					<select id="mode">
 						<option value="encode">Encode</option>
 						<option value="decode">Decode</option>
 					</select>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="column column-80">
 					<button class="button-primary" type="submit">blah …</button>
 				</div>
 			</div>
