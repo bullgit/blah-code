@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	var radios = document.querySelectorAll('input[name="language"]');
 	for (var i = radios.length; i--;) {
 		radios[i].addEventListener('change', function (e) {
-		document.querySelectorAll('button')[0].innerHTML = document.querySelector('input[name="language"]:checked').value + ' …';
-	});
+			document.querySelectorAll('button')[0].innerHTML = document.querySelector('input[name="language"]:checked').value + ' …';
+		});
 	}
 	form.addEventListener('submit', function (e) {
 		e.preventDefault();
