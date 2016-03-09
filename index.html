@@ -23,6 +23,19 @@
 		textarea { height: 15rem; }
 		textarea:focus { border-color: #1393d5; }
 		.radio { font-weight: normal; }
+		/* fix error made by milligram */
+		@media (max-width: 40rem) {
+			.row {
+				flex-direction: row;
+				margin-left: -1rem;
+				width: calc(100% + 2.0rem)
+			}
+
+			.row .column {
+				margin-bottom: inherit;
+				padding: 0 1rem
+			}
+		}
 	</style>
 </head>
 
